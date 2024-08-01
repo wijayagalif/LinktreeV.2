@@ -1,23 +1,3 @@
-Ada beberapa hal yang bisa diperbaiki atau diperhatikan di kode React ini:
-
-1. **Penggunaan `style` dalam JSX:**
-   - Di bagian `iframe` di dalam tag `<a>`, properti `style` seharusnya ditulis dalam format objek JavaScript. Misalnya: `style={{ borderRadius: '12px' }}`.
-
-2. **Tag `<a>` tidak memiliki atribut `href`:**
-   - Tag `<a>` yang membungkus `<iframe>` tidak memiliki atribut `href`, jadi itu tidak bisa digunakan sebagai link yang valid. Anda bisa mempertimbangkan untuk mengubah tag `<a>` menjadi tag `<div>` atau tag lain yang sesuai jika tujuan Anda hanya menampilkan iframe tanpa link.
-
-3. **Duplikasi icon Instagram:**
-   - Anda menggunakan `BsInstagram` untuk kedua link Instagram. Mungkin lebih baik menggunakan icon yang berbeda jika Anda ingin membedakan antara dua akun Instagram.
-
-4. **Kelas CSS yang tidak didefinisikan:**
-   - Pastikan bahwa semua kelas CSS yang digunakan (`card`, `card_body`, `profile`, `avatar`, `bg_content`, `btn_action`, dll.) sudah didefinisikan dalam file `App.css`.
-
-5. **Periksa import dan versi library:**
-   - Pastikan bahwa semua library yang diimpor (`react-icons`, `particles-bg`, dll.) sudah terpasang dan versinya kompatibel dengan proyek Anda.
-
-Berikut adalah versi yang diperbaiki dari kode Anda:
-
-```jsx
 import ParticlesBg from "particles-bg";
 import './App.css';
 import { BsInstagram } from "react-icons/bs";
@@ -88,6 +68,3 @@ function App() {
 }
 
 export default App;
-```
-
-Jika ada kesalahan lain yang spesifik atau masalah yang Anda hadapi, beri tahu saya!
